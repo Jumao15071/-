@@ -1,0 +1,160 @@
+{
+  "chat_screen_content/middle_chat_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "chat_header_content_area@netease_chat_extension.chat_header_content_area": {
+              "size": [ "50%", 27 ],
+              "anchor_from": "top_right",
+              "anchor_to": "top_right",
+              "offset": ["50%+10.0px", 10],
+              "layer": 20
+            }
+          },
+          {
+            "dabu_close_btn@common.light_close_button": {
+              "anchor_from": "top_middle",
+              "anchor_to": "top_middle",
+              "size": [22, 22],
+              "offset": ["46%+0.0px", 5],
+              "layer": 20
+            }
+          },
+          {
+            "chat_previous@chat.chat_previous": {
+              "anchor_from": "bottom_middle",
+              "anchor_to": "bottom_middle",
+              "offset": ["50%+14.0px", -118],
+              "layer": 20
+            }
+          },
+          {
+            "chat_next@chat.chat_next": {
+              "anchor_from": "bottom_middle",
+              "anchor_to": "bottom_middle",
+              "offset": ["50%+14.0px", -91],
+              "layer": 20
+            }
+          },
+          {
+            "chat_autocomplete_back@chat.chat_autocomplete_back": {
+              "anchor_from": "bottom_middle",
+              "anchor_to": "bottom_middle",
+              "offset": ["50%+14.0px", -64],
+              "layer": 20
+            }
+          },
+          {
+            "chat_autocomplete@chat.chat_autocomplete": {
+              "anchor_from": "bottom_middle",
+              "anchor_to": "bottom_middle",
+              "offset": ["50%+14.0px", -37],
+              "layer": 20
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "chat_screen_content/middle_social_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "dabu_close_btn@common.light_close_button": {
+              "anchor_from": "top_middle",
+              "anchor_to": "top_middle",
+              "size": [22, 22],
+              "offset": ["46%+0.0px", 5],
+              "layer": 20
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "chat_header_content_area": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [ "100%c", 60 ],
+    "offset": [ 0, 0 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "bindings": [],
+    "controls": [
+      {
+        "coordinate_dropdown@chat.coordinate_dropdown": {
+          "size": [ 100, 27 ]
+        }
+      },
+      {
+        "copy_coordinate_button@chat.copy_coordinate_button": {
+          "size": [ 27, 27 ]
+        }
+      },
+      {
+        "icon@common.gamepad_helper_y": {
+          "$gamepad_helper_size": [ 20, 20 ],
+          "$gamepad_helper_icon_size": [ 20, 20 ],
+          "$gamepad_helper_icon_image_size": [ 27, 27 ],
+          "$icon_description_bind_type": "none",
+          "$gamepad_helper_visible_binding_name": "#is_using_gamepad"
+        }
+      },
+      {
+        "paste_button@chat.paste_button": {
+          "size": [ 27, 27 ]
+        }
+      }
+    ]
+  },
+  "chat_screen_content/close_btn": {
+    "size": [0, 0]
+  },
+  "auto_complete_panel_contents_with_item": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "click_autocomplete_button@common.button": {
+              "$pressed_button_name": "button.click_autocomplete",
+              "controls": [
+                {
+                  "default": {
+                    "type": "panel"
+                  }
+                },
+                {
+                  "hover@chat.click_autocomplete_is_focused": {}
+                },
+                {
+                  "pressed@chat.click_autocomplete_is_focused": {}
+                }
+              ],
+              "bindings": [
+                {
+                  "binding_type": "collection",
+                  "binding_name": "#is_autocomplete_suggestion",
+                  "binding_collection_name": "auto_complete"
+                },
+                {
+                  "binding_type": "collection_details",
+                  "binding_collection_name": "auto_complete"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

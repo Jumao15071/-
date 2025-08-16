@@ -1,0 +1,18 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "护眼大补丸1.21v9",
+    "description": "移植B站up主@黑山大叔 同名作品",
+    "uuid": "891e983f-c114-4675-9013-939999007d6b",
+    "version": [ 21, 9, 2 ],
+    "min_engine_version": [ 1, 18, 0 ]
+  },
+  "modules": [
+    {
+      "description": "纹理移植@橘猫sama",
+      "type": "resources",
+      "uuid": "c50e99fc-3195-4c8e-8142-44d2ff0237eb",
+      "version": [ 21, 9, 2 ]
+    }
+  ]
+}

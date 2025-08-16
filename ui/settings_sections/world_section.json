@@ -1,0 +1,34 @@
+{
+	"game_section": {
+		"modifications": [
+			{
+				"control_name": "command_blocks_enabled_toggle",
+				"operation": "insert_before",
+				"value": [
+					{
+						"perfect_weather_toggle@settings_common.option_toggle": {
+							"$tts_section_header": "createWorldScreen.cheatSettings",
+							"$option_label": "dabu.createWorldScreen.perfectweather",
+							"$option_binding_name": "#perfect_weather",
+							"$option_enabled_binding_name": "#perfect_weather_enabled",
+							"$toggle_name": "perfect_weather",
+							"$focus_override_right": "FOCUS_OVERRIDE_STOP",
+							"$toggle_binding_condition": "always_when_visible"
+						}
+					},
+					{
+						"allow_commands_toggle@settings_common.option_toggle": {
+							"$tts_section_header": "createWorldScreen.cheatSettings",
+							"$option_label": "dabu.createWorldScreen.commands",
+							"$option_binding_name": "#allow_cheats",
+							"$option_enabled_binding_name": "#allow_cheats_enabled",
+							"$toggle_name": "allow_cheats",
+							"$focus_override_right": "FOCUS_OVERRIDE_STOP",
+							"$toggle_binding_condition": "always_when_visible"
+						}
+					}
+				]
+			}
+		]
+	}
+}
